@@ -45,56 +45,67 @@ Win10 或 Linux  php5.6+  Apache  mysql
 
 ### 数据流图
 
-### 系统IPO图：
+![数据流图](./readme_img/shujuliutu.png)
 
+### 系统IPO图：
+![数据流图](./readme_img/IPO.png)
 
 ### Use Case图
+![数据流图](./readme_img/UserCase.png)
 
 ### 设计类图
+![数据流图](./readme_img/class.png)
 
 ### 通信图（协作图）
+![数据流图](./readme_img/tongxin.png)
 
 ### 活动图
+![数据流图](./readme_img/active.png)
 
 ### 数据库ER图：
+![数据流图](./readme_img/ER.png)
 
 
 系统设计
 ---
 
 ### 系统结构图设计
+![数据流图](./readme_img/xitongjiegou.png)
 
 
 
 ### 数据库数据字典设计
 mc_users：储存用户信息，主键为（id,email），包含用户id、姓名、邮箱、密码、标志值、创建日期，更新日期8个字段
+![数据流图](./readme_img/users.png)
 
 mc_project：存储用户任务信息，主键为（id,project）,外键为id，包含用户id，项目、类型、任务起始时间、任务结束时间、打卡次数、打卡时间
-
+![数据流图](./readme_img/project.png)
 
 模块/函数设计
 ---
 
 ### 个人中心数据处理模块
+![数据流图](./readme_img/gerenzhongxin.png)
 
 UserController类中的Index方法直接调用Auth类中存储的用户ID到数据库中取得对应用户的资料封装到参数 $data 中传给前端处理。
 流程图：
+![数据流图](./readme_img/gerenzhongxinliucheng.png)
 
 ###  今日报表数据处理模块
 
-
+![数据流图](./readme_img/jinribaobiao.png)
 
 FormController类中的index方法用Request:all()获取前端表单打卡提交的数据，并根据请求的信息处理数据（从数据库中取数据）封装到 $return_data 变量中传给前端。
 流程图：
-
+![数据流图](./readme_img/jinribaobiaoliucheng.png)
 
 
 
 ### 创建任务数据处理模块
-
+![数据流图](./readme_img/chuangjainrenwu.png)
 MarkController类index方法用Request:all()获取前端表单创建任务提交的数据，处理提交的数据后将任务表单更新到数据库的project表中，更新成功后将 $response 创建成功的信息返回给前端。
 流程图：
-
+![数据流图](./readme_img/chuangjianrenwuliucheng.png)
 
 
 系统实现
@@ -104,11 +115,14 @@ MarkController类index方法用Request:all()获取前端表单创建任务提交
 ---
 
 ### UserController模块，用户资料模块通过index方法将个人用户信息返回给前端。
-
+![数据流图](./readme_img/UserController1.png)
+![数据流图](./readme_img/UserController2.png)
 
 ### FormController模块，对应用户ID的项目信息通过index方法从数据库中取得数据后，经处理，返回给前端。
-
+![数据流图](./readme_img/FormController1.png)
+![数据流图](./readme_img/FormController2.png)
 
 ### MarkController模块，处理用户新建项目。Index方法对提交的表单数据进行处理后更新到数据库中，并返回提示信息。
-
+![数据流图](./readme_img/MarkController1.png)
+![数据流图](./readme_img/MarkController2.png)
 
