@@ -87,24 +87,24 @@ mc_project：存储用户任务信息，主键为（id,project）,外键为id，
 ### 个人中心数据处理模块
 ![数据流图](./readme_img/gerenzhongxin.png)
 
-UserController类中的Index方法直接调用Auth类中存储的用户ID到数据库中取得对应用户的资料封装到参数 $data 中传给前端处理。
-流程图：
+UserController类中的Index方法直接调用Auth类中存储的用户ID到数据库中取得对应用户的资料封装到参数 $data 中传给前端处理。</br>
+流程图：</br>
 ![数据流图](./readme_img/gerenzhongxinliucheng.png)
 
 ###  今日报表数据处理模块
 
 ![数据流图](./readme_img/jinribaobiao.png)
 
-FormController类中的index方法用Request:all()获取前端表单打卡提交的数据，并根据请求的信息处理数据（从数据库中取数据）封装到 $return_data 变量中传给前端。
-流程图：
+FormController类中的index方法用Request:all()获取前端表单打卡提交的数据，并根据请求的信息处理数据（从数据库中取数据）封装到 $return_data 变量中传给前端。</br>
+流程图：</br>
 ![数据流图](./readme_img/jinribaobiaoliucheng.png)
 
 
 
 ### 创建任务数据处理模块
 ![数据流图](./readme_img/chuangjainrenwu.png)
-MarkController类index方法用Request:all()获取前端表单创建任务提交的数据，处理提交的数据后将任务表单更新到数据库的project表中，更新成功后将 $response 创建成功的信息返回给前端。
-流程图：
+MarkController类index方法用Request:all()获取前端表单创建任务提交的数据，处理提交的数据后将任务表单更新到数据库的project表中，更新成功后将 $response 创建成功的信息返回给前端。</br>
+流程图：</br>
 ![数据流图](./readme_img/chuangjianrenwuliucheng.png)
 
 
